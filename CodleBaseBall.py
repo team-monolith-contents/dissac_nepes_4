@@ -70,10 +70,10 @@ class Baseball():
         self.__output = widgets.Output()
         display(self.__play_button, self.__player_answer, self.__canvas, self.__output)
         
-        self.__player_answer.observe(self.__on_player_anwer_change, names='value')
+        self.__player_answer.observe(self.__on_player_answer_change, names='value')
         self.__play_button.on_click(self.__play)
             
-    def __on_player_anwer_change(self, change):
+    def __on_player_answer_change(self, change):
         with self.__output:
             self.__player = f"{change['new']:03}"
             if self.__player and self.__check_input(self.__player):
@@ -166,10 +166,10 @@ class Project1():
         self.__output = widgets.Output()
         display(self.__play_button, self.__player_answer, self.__canvas, self.__output)
         
-        self.__player_answer.observe(self.__on_player_anwer_change, names='value')
+        self.__player_answer.observe(self.__on_player_answer_change, names='value')
         self.__play_button.on_click(self.__play)
             
-    def __on_player_anwer_change(self, change):
+    def __on_player_answer_change(self, change):
         with self.__output:
             self.__player = f"{change['new']:03}"
             if self.__player and self.__check_input(self.__player):
